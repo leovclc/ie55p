@@ -9,7 +9,7 @@ import '../assets/css/style.css';
 
 
 
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 function NavigationBar() {
 
@@ -47,28 +47,25 @@ function NavigationBar() {
         setCurrentUrl(e.target.pathname);
     }
 
-    const onscroll = (el, listener) => {
-      el.addEventListener('scroll', listener)
-    }
 
 
-    function initializeHeader() {
-      let selectHeader = select('#header');
-      if (selectHeader) {
-        const headerScrolled = () => {
-          if (window.scrollY > 100) {
-            selectHeader.classList.add('header-scrolled');
-          } else {
-            selectHeader.classList.remove('header-scrolled');
-          }
+    useEffect(() => {
+      const initializeHeader = () => {
+        let selectHeader = select('#header');
+        if (selectHeader) {
+          const headerScrolled = () => {
+            if (window.scrollY > 100) {
+              selectHeader.classList.add('header-scrolled');
+            } else {
+              selectHeader.classList.remove('header-scrolled');
+            }
+          };
+          document.addEventListener('scroll', headerScrolled);
+          headerScrolled();
         }
-        onscroll(document, headerScrolled);
-        headerScrolled();
-      }
-    }
-    
-    // Call initializeHeader on page load
-    window.addEventListener('load', initializeHeader);
+      };
+      initializeHeader();
+    }, []);
 
     return(
         <header
