@@ -11,7 +11,7 @@ export default function HomeFeatures() {
 
     return(
         <>
-  <section className="features">
+  <section id="123" className="features">
     <div className="container">
       <div className="section-title">
         <h2>Features</h2>

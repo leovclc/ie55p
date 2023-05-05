@@ -27,7 +27,7 @@ export default function HomeHero() {
                 developments in environmental technology and information related to green lifestyles. Join us and let us care about the health of the earth and leave a better and greener home for future generations. Because
                 every small change will become a powerful force, and together push us towards a sustainable future.
               </p>
-              <a href="" className="btn-get-started ">
+              <a href="#123" className="btn-get-started ">
                 Read More
               </a>
             </div>

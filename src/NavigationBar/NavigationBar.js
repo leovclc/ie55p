@@ -13,11 +13,17 @@ import { useState } from 'react';
 
 function NavigationBar() {
 
-    function select(element) {
-        return document.querySelector(element);
-      }
+
     const [isNavbarMobile, setIsNavbarMobile] = useState(false);
 
+    const select = (el, all = false) => {
+      el = el.trim()
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
+      }
+    }
     const handleDropdownClick = (e) => {
       if (isNavbarMobile) {
         e.preventDefault();
@@ -42,41 +48,32 @@ function NavigationBar() {
     }
 
     const onscroll = (el, listener) => {
-        el.addEventListener('scroll', listener)
-      }
-  
-    const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
-
-    if (!header.classList.contains('header-scrolled')) {
-        offset -= 20
+      el.addEventListener('scroll', listener)
     }
 
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-        top: elementPos - offset,
-        behavior: 'smooth'
-    })
-    }
 
-    let selectHeader = select('#header')
-    if (selectHeader) {
-    const headerScrolled = () => {
-        if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-        } else {
-        selectHeader.classList.remove('header-scrolled')
+    function initializeHeader() {
+      let selectHeader = select('#header');
+      if (selectHeader) {
+        const headerScrolled = () => {
+          if (window.scrollY > 100) {
+            selectHeader.classList.add('header-scrolled');
+          } else {
+            selectHeader.classList.remove('header-scrolled');
+          }
         }
+        onscroll(document, headerScrolled);
+        headerScrolled();
+      }
     }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-    }
+    
+    // Call initializeHeader on page load
+    window.addEventListener('load', initializeHeader);
 
     return(
         <header
         id="header"
-        className="fixed-top d-flex align-items-center header-transparent"
+        className={currentUrl === "/" ?"fixed-top d-flex align-items-center header-transparent" : "fixed-top d-flex align-items-center"}
       >
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo">
@@ -114,10 +111,10 @@ function NavigationBar() {
                 </a>
                 <ul>
                   <li>
-                    <a className={currentUrl === "/" ? "active" : ""} href="/information/state">State Information</a>
+                    <a  href="/information/state">State Information</a>
                   </li>
                   <li>
-                    <a className={currentUrl === "/" ? "active" : ""} href="/information/transport">Transport Information</a>
+                    <a  href="/information/transport">Transport Information</a>
                   </li>
                 </ul>
               </li>
