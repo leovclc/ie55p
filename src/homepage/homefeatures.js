@@ -6,6 +6,7 @@ import '../assets/vendor/boxicons/css/boxicons.min.css'
 import '../assets/vendor/glightbox/css/glightbox.min.css';
 import '../assets/vendor/swiper/swiper-bundle.min.css';
 import '../assets/css/style.css';
+import pic1 from'../assets/img/features-1.svg'
 
 export default function HomeFeatures() {
 
@@ -24,12 +25,11 @@ export default function HomeFeatures() {
       </div>
       <div className="row" data-aos="fade-up">
         <div className="col-md-5">
-          <img src="assets/img/features-1.svg" className="img-fluid" alt="" />
+          <img src={pic1} className="img-fluid" alt="" />
         </div>
         <div className="col-md-7 pt-4">
           <h3>
-            Voluptatem dignissimos provident quasi corporis voluptates sit
-            assumenda.
+            Footprint Calculator
           </h3>
           <p className="fst-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -52,7 +52,7 @@ export default function HomeFeatures() {
           <img src="assets/img/features-2.svg" className="img-fluid" alt="" />
         </div>
         <div className="col-md-7 pt-5 order-2 order-md-1">
-          <h3>Corporis temporibus maiores provident</h3>
+          <h3>Carbon Emission Information</h3>
           <p className="fst-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -72,8 +72,7 @@ export default function HomeFeatures() {
         </div>
         <div className="col-md-7 pt-5">
           <h3>
-            Sunt consequatur ad ut est nulla consectetur reiciendis animi
-            voluptas
+            Travel Recommendation
           </h3>
           <p>
             Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia
@@ -102,8 +101,7 @@ export default function HomeFeatures() {
         </div>
         <div className="col-md-7 pt-5 order-2 order-md-1">
           <h3>
-            Quas et necessitatibus eaque impedit ipsum animi consequatur
-            incidunt in
+            Learning About Carbon Emission
           </h3>
           <p className="fst-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
