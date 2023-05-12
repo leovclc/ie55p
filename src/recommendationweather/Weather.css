@@ -1,0 +1,167 @@
+.title{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+
+.submit{
+    margin:20px;
+}
+
+.recommendationAlert{
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.weatherInfo{
+    margin: 30px;
+}
+
+.weatherInfo > p{
+    font-size: 20px;
+    height: 10px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.search{
+    height: 50px;
+}
+
+.recommendation-blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+}
+
+.block{
+    margin: 20px;
+    background-color: #DEF1FF;
+    width: 100%;
+    position: relative;
+}
+
+.block-not {
+    height: 100%;
+    margin: 10px;
+    background-color: #FE8989;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.first-line{
+    display:flex;
+}
+
+.first-line > p{
+    color: black;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.tag{
+    background-color: #62C56B;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #449ABE;
+    border-width:2px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2px;
+    margin-top: 2px;
+}
+
+.tag > p{
+    color: white;
+    font-size: 12px;
+    margin: 10px;
+}
+
+
+
+.block-info {
+    display:flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.block-info > h2{
+    color: black;
+    font-size: 15px;
+    margin-right: 100px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.reason{
+    background-color: #979797;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #449ABE;
+    border-width:2px;
+    border-style: solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bot:2px;
+}
+
+.ok{
+    background-color: #62C56B;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #449ABE;
+    border-width:2px;
+    border-style: solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.ok > p{
+    color: white;
+    font-size: 12px;
+    margin:10px;
+}
+
+.reason > p{
+    color: white;
+    font-size: 12px;
+    margin:10px;
+}
+
+.travel-recommendation{
+    align-items: center;
+    justify-content:center;
+    text-align:center;
+    font-size: 20px;
+}
+
+.nothing{
+    display:none;
+}
+
+.upper-block{
+    display: flex;
+}
+
+.lower-block{
+    display:flex;
+}

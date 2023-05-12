@@ -10,6 +10,9 @@ import Footer from './footer/Footer';
 import React from 'react';
 import SubHeader from './subheader/Subheader';
 import TrafficAndCarbonEstimator from './trafficAndCarbonEstimator/TrafficAndCarbonEstimator';
+import Weather2 from './recommendationweather/Weather';
+import { Alert } from 'react-bootstrap';
+import Record from './record/Record';
 
 function App() {
 
@@ -43,7 +46,23 @@ function App() {
         <Route path="/travel" element={
           <main id="main">
             <SubHeader name = "Travel"/>
-          
+            <div className="whole-recommendation">
+        {/* <Alert variant="info" className='centered-alert'>
+           Enter a destination to get travel suggestions. For example, fill in: Monash university caulfield or Monash university clayton.
+        </Alert> */}
+        <div className="middle-recommendation">
+            {/*<div className="left-component">
+              <OriginMap></OriginMap>
+            </div>*/}
+            <div>
+              {/* <TransportPage></TransportPage> */}
+              <Weather2></Weather2>
+            </div>
+         </div>
+            <Alert variant="info" className='bottom-alert' >
+                Tips:   Are you satisfied with our recommendation results, and want to check more low-carbon travel knowledge?
+            </Alert>
+         </div>
           </main>}>
       
         </Route>
@@ -52,7 +71,7 @@ function App() {
         <Route path="/educaiton" element={
           <main id="main">
             <SubHeader name="Education"/>
-          
+
           </main>}>
         
         </Route> 
@@ -73,10 +92,10 @@ function App() {
         
         </Route>
 
-        <Route path="/test" element={
+        <Route path="/track" element={
           <main id="main">
-            <SubHeader name = "Test"/>
-          
+            <SubHeader name = "track"/>
+            <Record></Record>
           </main>}>
         
         </Route>
