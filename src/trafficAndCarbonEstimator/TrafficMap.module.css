@@ -1,0 +1,14 @@
+/* TrafficMap.module.css */
+.traffic-map-container {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    
+    /* background-image: url('./background.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    min-height: 100vh;  */
+  }
+  
